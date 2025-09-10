@@ -13,9 +13,13 @@ Route::get('/ninjas', function () {
     ];
 
     return view('ninjas.index', [
-        "greeting" => "hello world",
+        "greeting" => "hello",
         "ninjas" => $ninjas
     ]);
+});
+
+Route::get('/ninjas/create', function () {
+    return view('ninjas.create');
 });
 
 Route::get('/ninjas/{id}', function ($id) {
